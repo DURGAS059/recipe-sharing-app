@@ -8,12 +8,6 @@ pipeline {
     }
 
     stages {
-        stage('Clone Code') {
-            steps {
-                git branch: 'main', url: 'https://github.com/DURGAS059/receipe-sharing-app.git'
-            }
-        }
-
         stage('Build Backend Image') {
             steps {
                 sh 'docker build -t $DOCKER_USER/$IMAGE_BACKEND:latest ./backend'
