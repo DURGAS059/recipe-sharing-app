@@ -1,0 +1,9 @@
+backend/node_modules
+crisp/node_modules
+backend/uploads
+.env
+dist
+build
+coverage
+npm-debug.log
+.DS_Store

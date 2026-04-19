@@ -1,0 +1,249 @@
+/* RecipesPage.css */
+
+/* Container for the top section */
+.recipe-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.delete-circle {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #808080;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s;
+}
+
+.delete-circle:hover {
+  background: #606060;
+}
+
+.recipes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}
+.recipe-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+/* Like and Save icons */
+
+
+
+
+/* Page title */
+.recipes-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.recipes-header h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Search Bar */
+.recipes-search {
+  width: 300px;              /* fixed width */
+  max-width: 80%;            /* responsive on mobile */
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.recipes-search:focus {
+  border-color: #ff7043;
+  box-shadow: 0 0 5px rgba(255, 112, 67, 0.5);
+}
+
+/* Recipes grid */
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* auto-fill packs tightly */
+  gap: 20px;         /* space between cards */
+  padding: 20px;
+  justify-content: center; /* center grid */
+}
+
+/* Each card */
+.recipe-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  width: 250px;     /* ✅ fixed width for uniformity */
+  margin: 0;        /* remove auto margin */
+}
+
+/* Image */
+.recipe-card img {
+  width: 100%;
+  height: 160px;            /* ✅ smaller fixed height */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Recipe image */
+
+
+/* Recipe title */
+.recipe-card h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 12px 16px 8px 16px;
+  color: #333;
+}
+
+/* Recipe metadata */
+.recipe-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+
+.recipe-username {
+  font-weight: 600;
+  color: #333;
+}
+
+.recipe-timestamp {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+/* Buttons and metadata container */
+.recipe-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px 10px 10px;
+  gap: 8px;
+}
+
+.button-and-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+  width: 100%;
+}
+
+.like-save-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+/* Buttons */
+.recipe-buttons button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+
+.recipe-buttons .like-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 5px 5px;
+ 
+  /* border: 1px solid #000; Black border */
+  border-radius: 6px;
+  background: transparent;
+  color: #000;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.recipe-buttons .like-btn:hover {
+  background-color: #f0f0f0; /* light hover effect */
+}
+
+.recipe-buttons .save-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 10px;
+  /* border: 1px solid #000; Black border */
+  border-radius: 6px;
+  background: transparent;
+  color: #000;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.recipe-buttons .save-btn:hover {
+  background-color: #f0f0f0;
+}
+.recipe-buttons .view-btn {
+  width: auto;
+  min-width: 140px;
+  background-color: orange;
+  margin: 0 auto;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.recipe-buttons .view-btn:hover {
+  background-color: orangered;
+}
+
+/* Like and Save buttons in a row below View */
+.recipe-buttons .like-save-container {
+  display: flex;
+  justify-content: space-between;
+}
+.recipe-buttons {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  gap: 1px; /* space between view button and like/save */
+}
+
+.like-save-buttons {
+  display: flex;
+  gap: 1px; /* space between like & save buttons */
+}
+

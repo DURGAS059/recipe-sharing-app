@@ -1,0 +1,82 @@
+.add-recipe-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+.add-recipe-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.add-recipe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add-recipe-form input,
+.add-recipe-form textarea,
+.add-recipe-form select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+}
+
+.add-recipe-form textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+/* Instructions Section */
+.instructions-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.instructions-section label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.instruction-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.instruction-step span {
+  font-weight: bold;
+  min-width: 20px;
+}
+
+.instruction-step textarea {
+  flex: 1;
+  min-height: 50px;
+  resize: vertical;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+/* Button */
+.add-recipe-form button {
+  padding: 12px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.add-recipe-form button:hover {
+  background-color: #45a049;
+}

@@ -1,0 +1,38 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    build: ./backend
+    container_name: backend
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      PORT: 5000
+      MONGO_URI: mongodb://mongo:27017/recipeApp
+      JWT_SECRET: secretkey
+      EMAIL_USER: durgas2440@gmail.com
+      EMAIL_PASS: gwxj wgsw ghvz swqi
+    depends_on:
+      - mongo
+
+  frontend:
+    build: ./crisp
+    container_name: frontend
+    restart: always
+    ports:
+      - "3000:80"
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+    depends_on:
+      - backend
+
+volumes:
+  mongo_data:
