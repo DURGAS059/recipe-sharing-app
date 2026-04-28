@@ -9,7 +9,7 @@ services:
       - mongo_data:/data/db
 
   backend:
-    build: ./backend
+    image: durgasankaran/receipe-sharing-app-backend:latest
     container_name: backend
     restart: always
     ports:
@@ -24,7 +24,7 @@ services:
       - mongo
 
   frontend:
-    build: ./crisp
+    image: durgasankaran/receipe-sharing-app-frontend:latest
     container_name: frontend
     restart: always
     ports:
