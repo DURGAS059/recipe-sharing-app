@@ -8,7 +8,7 @@ export default function Dashboard({ username }) {
     <div className="dashboard-container">
       
       <section className="hero">
-        <h1>Welcome back Durga{username}!</h1>
+        <h1>Welcome back Dhivya{username}!</h1>
         <p>Access your saved recipes, custom collections, and more.</p>
       </section>
 
