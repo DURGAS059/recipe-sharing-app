@@ -9,7 +9,7 @@ export default function Dashboard({ username }) {
       
       <section className="hero">
         <h1>Welcome back Dhivya{username}!</h1>
-        <p>Access your recipes</p>
+        <p>Access your recipes and explore more recipes</p>
       </section>
 
       <section className="dashboard-options center">
